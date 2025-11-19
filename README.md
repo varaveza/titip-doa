@@ -4,12 +4,12 @@ Aplikasi web untuk sistem titip doa Umrah dengan React frontend dan Express.js b
 
 ## Struktur Project
 
-```
+
 doa/
 ├── react/          # React Frontend Application
 ├── api-express/   # Express.js Backend API
 └── README.md      # This file
-```
+
 
 ## Tech Stack
 
@@ -31,38 +31,38 @@ doa/
 ### Install Dependencies (Sekaligus)
 
 Dari root folder `doa`:
-```bash
+bash
 npm run install:all
-```
+
 
 Atau install manual:
-```bash
+bash
 npm install
 cd api-express && npm install && cd ..
 cd react && npm install && cd ..
-```
+
 
 ### Setup Environment Variables
 
 **Backend** (`api-express/.env`):
-```
+
 PORT=3001
 FRONTEND_URL=http://localhost:3000
 SESSION_SECRET=your-secret-key-here
 NODE_ENV=development
-```
+
 
 **Frontend** (`react/.env`):
-```
+
 VITE_API_URL=http://localhost:3001
-```
+
 
 ### Run Development (Backend + Frontend)
 
 Dari root folder `doa`:
-```bash
+bash
 npm run dev
-```
+
 
 Ini akan menjalankan:
 - Backend API di `http://localhost:3001`
@@ -71,65 +71,65 @@ Ini akan menjalankan:
 ### Run Production
 
 1. Build frontend:
-```bash
+bash
 npm run build
-```
+
 
 2. Start production:
-```bash
+bash
 npm start
-```
+
 
 ## Manual Setup (Jika Perlu)
 
 ### Backend API
 
 1. Masuk ke folder api-express:
-```bash
+bash
 cd api-express
-```
+
 
 2. Install dependencies:
-```bash
+bash
 npm install
-```
+
 
 3. Buat file `.env`:
-```
+
 PORT=3001
 FRONTEND_URL=http://localhost:3000
 SESSION_SECRET=your-secret-key-here
 NODE_ENV=development
-```
+
 
 4. Jalankan server:
-```bash
+bash
 npm run dev
-```
+
 
 Server akan berjalan di `http://localhost:3001`
 
 ### Frontend React
 
 1. Masuk ke folder react:
-```bash
+bash
 cd react
-```
+
 
 2. Install dependencies:
-```bash
+bash
 npm install
-```
+
 
 3. Buat file `.env`:
-```
+
 VITE_API_URL=http://localhost:3001
-```
+
 
 4. Jalankan development server:
-```bash
+bash
 npm run dev
-```
+
 
 Aplikasi akan berjalan di `http://localhost:3000`
 
