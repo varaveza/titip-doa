@@ -1,5 +1,5 @@
 import express from 'express'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import db from '../db/database.js'
 import { requireAuth } from '../middleware/auth.js'
 import { sanitizeString, validateUsername, validateFullName, validatePassword } from '../utils/validator.js'

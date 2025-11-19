@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "install:all": "npm install && cd api-express && npm install && cd ../react && npm install",
+    "install:frontend": "cd react && npm install",
+    "install:backend": "cd api-express && npm install",
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:frontend\"",
     "dev:api": "cd api-express && npm run dev",
     "dev:frontend": "cd react && npm run dev",

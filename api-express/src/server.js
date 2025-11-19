@@ -9,8 +9,18 @@ import { initDatabase } from './db/database.js'
 const app = express()
 const PORT = process.env.PORT || 3001
 
-// Initialize database
+// Initialize database (async) before starting server
+let dbReady = false
+
 initDatabase()
+  .then(() => {
+    dbReady = true
+    console.log('Database ready')
+  })
+  .catch(err => {
+    console.error('Failed to initialize database:', err)
+    process.exit(1)
+  })
 
 // Middleware
 app.use(cors({

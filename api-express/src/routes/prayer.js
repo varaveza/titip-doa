@@ -22,7 +22,8 @@ router.get('/', requireAuth, (req, res) => {
 
     // Get unread count
     const countStmt = db.prepare('SELECT COUNT(*) as count FROM prayers WHERE user_id = ? AND is_read = 0')
-    const unreadCount = countStmt.get(userId).count
+    const countResult = countStmt.get(userId)
+    const unreadCount = countResult ? countResult.count : 0
 
     res.json({
       prayers: prayers,
