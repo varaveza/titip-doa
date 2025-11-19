@@ -1,0 +1,31 @@
+{
+  "name": "titip-doa",
+  "version": "1.0.0",
+  "description": "Umrah Prayer Request Application - React Frontend + Express Backend",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && cd api-express && npm install && cd ../react && npm install",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:frontend\"",
+    "dev:api": "cd api-express && npm run dev",
+    "dev:frontend": "cd react && npm run dev",
+    "start": "concurrently \"npm run start:api\" \"npm run start:frontend\"",
+    "start:api": "cd api-express && npm start",
+    "start:frontend": "cd react && npm run preview",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd react && npm run build",
+    "build:all": "npm run build:frontend"
+  },
+  "keywords": [
+    "umrah",
+    "prayer",
+    "react",
+    "express",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

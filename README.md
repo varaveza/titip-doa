@@ -26,7 +26,61 @@ doa/
 - bcrypt (password hashing)
 - express-session
 
-## Setup
+## Quick Start
+
+### Install Dependencies (Sekaligus)
+
+Dari root folder `doa`:
+```bash
+npm run install:all
+```
+
+Atau install manual:
+```bash
+npm install
+cd api-express && npm install && cd ..
+cd react && npm install && cd ..
+```
+
+### Setup Environment Variables
+
+**Backend** (`api-express/.env`):
+```
+PORT=3001
+FRONTEND_URL=http://localhost:3000
+SESSION_SECRET=your-secret-key-here
+NODE_ENV=development
+```
+
+**Frontend** (`react/.env`):
+```
+VITE_API_URL=http://localhost:3001
+```
+
+### Run Development (Backend + Frontend)
+
+Dari root folder `doa`:
+```bash
+npm run dev
+```
+
+Ini akan menjalankan:
+- Backend API di `http://localhost:3001`
+- Frontend React di `http://localhost:3000`
+
+### Run Production
+
+1. Build frontend:
+```bash
+npm run build
+```
+
+2. Start production:
+```bash
+npm start
+```
+
+## Manual Setup (Jika Perlu)
 
 ### Backend API
 
@@ -40,7 +94,7 @@ cd api-express
 npm install
 ```
 
-3. Buat file `.env` (optional):
+3. Buat file `.env`:
 ```
 PORT=3001
 FRONTEND_URL=http://localhost:3000
